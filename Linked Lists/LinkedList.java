@@ -57,24 +57,42 @@ public class LinkedList<E> {
 
         if( this.head == null ) return;
 
+        /*Only one node */
+        if( this.head == this.tail ) {
+            this.head = null;
+            this.tail = null;
+            return;
+        }
+
         this.head = this.head.next;
         if( this.head == null ) this.tail = null;
 
     }
 
     public void removeLast() {
-        if( this.head == null )  return;
 
-        Node<E> slow = this.head;
-        Node<E> fast = this.head;
-        while( fast.next != null ) {
-            /* Have yet to complete */
+        if( this.head == null ) return;
+
+        Node<E> curr = this.head;
+        /* Only one node */
+        if( this.head == this.tail ) {
+            this.head = null;
+            this.tail = null;
+            return;
         }
+
+        while( curr.next != this.tail ) {
+            curr = curr.next;
+        }
+
+        /* 'curr' now is second to last node */
+        curr.next = null;
+        this.tail = curr;
 
     }
 
     public static void main( String[] args ) {
-
+        /* Filled Later */
     }
 
 }
