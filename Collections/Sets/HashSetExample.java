@@ -1,5 +1,7 @@
 import java.util.*;
 
+/* HashSets are placed in any order -- there is no ordering. */
+
 public class HashSetExample {
 
     public static void main( String[] args ) {
