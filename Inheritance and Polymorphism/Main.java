@@ -13,6 +13,14 @@ public class Main {
         System.out.println("The area is " + rectangle.getArea() );
         System.out.println("The perimeter is " + rectangle.getPerimeter() );
 
+        /* Understanding Casting */
+
+        //Object o = new Object();
+        //Circle c = (Circle) o; /* This will not work because 'o' is an instance of 'Object', NOT 'Circle. */
+
+        Object o2 = new Circle();
+        Circle c2 = (Circle) o2; /* This will work because 'o' is an instance of 'Circle' and it's declared type is Object. */
+                                 /* This is called downcasting. */
     }
 
 }
