@@ -41,7 +41,18 @@ public class Circle extends GeometricObject {
                 " and the radius is " + radius);
     }
 
+    /* Overrides the 'toString' in 'GeometricObject'. */
     public String toString() {
         return super.toString() + "\nradius is " + radius;
     }
+
+    /* Overrides the 'equals' method in 'Object'. */
+    public boolean equals( Object o ) {
+        if( o instanceof Circle )
+            return radius == ((Circle) o).getRadius();
+
+        return false;
+    }
+
+
 }
